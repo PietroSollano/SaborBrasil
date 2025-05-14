@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     async function carregarPublicacoes() {
-        if (window.location.pathname.includes("minhas-publicacoes.html")) {
+        if (window.location.pathname.includes("publicaçoes.html")) {
             await carregarMinhasPublicacoes();
         } else {
             const response = await fetch('/api/publicacoes');
@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function carregarMinhasPublicacoes() {
         if (!usuarioLogadoId) {
-            window.location.href = "index.html";
+            window.location.href = "saborbrasil.html";
             return;
         }
         const response = await fetch(`/api/minhas-publicacoes/${usuarioLogadoId}`);
